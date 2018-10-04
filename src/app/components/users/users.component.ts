@@ -7,6 +7,8 @@ import { User } from "../../models/User";
 })
 export class UsersComponent implements OnInit {
   users: User[];
+  showExtended: boolean = true;
+  loaded: boolean = false;
 
   constructor() {}
 
@@ -43,5 +45,6 @@ export class UsersComponent implements OnInit {
         }
       }
     ];
+    this.loaded = true;
   }
 }
